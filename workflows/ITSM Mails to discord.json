@@ -1,0 +1,85 @@
+{
+  "active": true,
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-11-23T15:35:10.358Z",
+  "id": "F0KsckhuSyRK9W1E",
+  "meta": null,
+  "name": "ITSM Mails to discord",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "id": "d389f313-10b5-497e-9fa1-dbdc28ba1690",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [
+        640,
+        200
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "r7GolQprWsz6VSoH",
+          "name": "ITSM Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=**Vous avez reçu un nouveau mail de {{ $json.From }} **\nSujet: {{ $json.Subject }}",
+        "options": {}
+      },
+      "id": "2fbc8dfb-223d-4678-811a-59a05847dade",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        860,
+        200
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "KiWgQR4AYAAm4gvf",
+          "name": "Discord Webhook account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Gmail Trigger": {
+      "lastTimeChecked": 1700753978,
+      "possibleDuplicates": [
+        "18bfcd65edc95d05"
+      ]
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-11-23T15:40:50.000Z",
+  "versionId": "21264a5a-4a65-4693-b793-755d6d255506"
+}
