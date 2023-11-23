@@ -173,6 +173,17 @@
           }
         ]
       ]
+    },
+    "ActiveCampaign": {
+      "main": [
+        [
+          {
+            "node": "Globals",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-11-23T16:09:18.731Z",
@@ -494,8 +505,8 @@
       "type": "n8n-nodes-base.activeCampaign",
       "typeVersion": 1,
       "position": [
-        980,
-        860
+        660,
+        820
       ]
     }
   ],
@@ -506,6 +517,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-23T16:24:28.000Z",
-  "versionId": "715ed4c5-ffbe-49e5-85be-87d92193d734"
+  "updatedAt": "2023-11-23T16:24:39.000Z",
+  "versionId": "3960d240-8020-4f79-aad1-d0a07c465f5f"
 }
