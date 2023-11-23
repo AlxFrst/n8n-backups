@@ -1,0 +1,137 @@
+{
+  "active": true,
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-11-23T15:41:04.382Z",
+  "id": "E8aBUMLtHsltaETN",
+  "meta": null,
+  "name": "Rocket League smurfs to Discord",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "filters": {}
+      },
+      "id": "45f81679-c980-4085-87f6-2df57e5dc3f7",
+      "name": "Gmail Trigger",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1,
+      "position": [
+        940,
+        380
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "HCDatW6QviFLZRtV",
+          "name": "RL Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Récupérer les données du nœud précédent\nconst snippet = items[0].json.snippet;\n\n// Trouver le code à 6 chiffres en utilisant une expression régulière\nconst codeMatch = snippet.match(/\\b\\d{6}\\b/);\n\n// Vérifier si un code a été trouvé\nif (codeMatch && codeMatch.length > 0) {\n    // Renvoyer le code trouvé\n    return [{json: {code: codeMatch[0]}}];\n} else {\n    // Renvoyer un message si aucun code n'est trouvé\n    return [{json: {message: \"Aucun code à 6 chiffres trouvé\"}}];\n}\n"
+      },
+      "id": "a7189f36-58a5-4b06-8802-85757d4ac44a",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1360,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.Subject }}",
+              "value2": "Epic Games - Email Verification"
+            }
+          ]
+        }
+      },
+      "id": "636ae43f-4f7e-4681-99ff-1b97fad7ff1a",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=Oh! tu as créer un nouveau smurf voila ton code **{{ $json.code }}**",
+        "options": {}
+      },
+      "id": "a863f4f5-8ee1-4dca-a226-26b67be5eff0",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        200
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lWlghoydExKrLkZw",
+          "name": "Discussion"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Gmail Trigger": {
+      "lastTimeChecked": 1700754807
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-11-23T15:53:27.000Z",
+  "versionId": "460b60b1-ba82-4bd6-abf6-b1dce60d8b73"
+}
