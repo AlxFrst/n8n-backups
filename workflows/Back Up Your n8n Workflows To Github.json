@@ -207,7 +207,7 @@
       "type": "n8n-nodes-base.github",
       "position": [
         1680,
-        300
+        640
       ],
       "typeVersion": 1,
       "alwaysOutputData": true,
@@ -491,6 +491,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-23T16:24:01.000Z",
-  "versionId": "6bd442a9-78dc-42fe-bb08-84b1bd81fa04"
+  "updatedAt": "2023-11-23T16:24:10.000Z",
+  "versionId": "eb743294-e600-4907-9919-efa83ea1e80e"
 }
