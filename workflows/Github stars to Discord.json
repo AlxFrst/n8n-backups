@@ -1,0 +1,96 @@
+{
+  "active": true,
+  "connections": {
+    "Github Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-11-23T16:35:51.915Z",
+  "id": "Vd8eXXY7l61ARAie",
+  "meta": null,
+  "name": "Github stars to Discord",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "owner": {
+          "__rl": true,
+          "value": "AlxFrst",
+          "mode": "list",
+          "cachedResultName": "AlxFrst",
+          "cachedResultUrl": "https://github.com/AlxFrst"
+        },
+        "repository": {
+          "__rl": true,
+          "value": "nextjs14-nextauth-prisma",
+          "mode": "list",
+          "cachedResultName": "nextjs14-nextauth-prisma",
+          "cachedResultUrl": "https://github.com/AlxFrst/nextjs14-nextauth-prisma"
+        },
+        "events": [
+          "star"
+        ]
+      },
+      "id": "07b810e1-34bd-4634-b0b8-ae86226218f6",
+      "name": "Github Trigger",
+      "type": "n8n-nodes-base.githubTrigger",
+      "typeVersion": 1,
+      "position": [
+        960,
+        420
+      ],
+      "webhookId": "9044670f-cc21-4116-89ae-0fc35c233ca2",
+      "credentials": {
+        "githubOAuth2Api": {
+          "id": "zXbUuulygBTZ9pHB",
+          "name": "GitHub account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=Vous avez une nouvelle **star** sur Github ! **{{ $json.body.repository.name }}**\nIl y à desormais {{ $json.body.repository.stargazers_count }} **étoiles**",
+        "options": {}
+      },
+      "id": "ffca4709-9c60-41c3-81b7-10a164fbfbb8",
+      "name": "Discord",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1180,
+        420
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "lWlghoydExKrLkZw",
+          "name": "Discussion"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Github Trigger": {
+      "webhookId": 444879092,
+      "webhookEvents": [
+        "star"
+      ]
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2023-11-23T16:47:43.000Z",
+  "versionId": "6a56e08a-307c-4881-972e-fc263cba05d1"
+}
