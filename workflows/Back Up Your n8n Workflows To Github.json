@@ -207,7 +207,7 @@
       "type": "n8n-nodes-base.github",
       "position": [
         1680,
-        640
+        300
       ],
       "typeVersion": 1,
       "alwaysOutputData": true,
@@ -482,6 +482,21 @@
         440
       ],
       "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "resource": "tag",
+        "operation": "update",
+        "updateFields": {}
+      },
+      "id": "0bc3b34a-92eb-4fd4-9724-1278bf96a53c",
+      "name": "ActiveCampaign",
+      "type": "n8n-nodes-base.activeCampaign",
+      "typeVersion": 1,
+      "position": [
+        980,
+        860
+      ]
     }
   ],
   "pinData": {},
@@ -491,6 +506,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-23T16:24:10.000Z",
-  "versionId": "eb743294-e600-4907-9919-efa83ea1e80e"
+  "updatedAt": "2023-11-23T16:24:28.000Z",
+  "versionId": "715ed4c5-ffbe-49e5-85be-87d92193d734"
 }
