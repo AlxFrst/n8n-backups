@@ -61,7 +61,7 @@
       "credentials": {
         "discordWebhookApi": {
           "id": "KiWgQR4AYAAm4gvf",
-          "name": "Discord Webhook account"
+          "name": "Mails"
         }
       }
     }
@@ -72,14 +72,14 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1700758024,
+      "lastTimeChecked": 1700764441,
       "possibleDuplicates": [
-        "18bfd13fbafa9b45"
+        "18bfd768763b4f72"
       ]
     }
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-23T16:47:56.000Z",
-  "versionId": "21264a5a-4a65-4693-b793-755d6d255506"
+  "updatedAt": "2023-11-23T22:16:01.000Z",
+  "versionId": "7ec0351f-38a0-49d5-bf09-36cbbdcc12fa"
 }
