@@ -71,8 +71,8 @@
       ],
       "credentials": {
         "discordWebhookApi": {
-          "id": "lWlghoydExKrLkZw",
-          "name": "Discussion"
+          "id": "KiWgQR4AYAAm4gvf",
+          "name": "Mails"
         }
       }
     }
@@ -83,7 +83,7 @@
   },
   "staticData": {
     "node:Github Trigger": {
-      "webhookId": 444879092,
+      "webhookId": 444920601,
       "webhookEvents": [
         "star"
       ]
@@ -91,6 +91,6 @@
   },
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2023-11-23T16:47:43.000Z",
-  "versionId": "6a56e08a-307c-4881-972e-fc263cba05d1"
+  "updatedAt": "2023-11-23T22:15:48.000Z",
+  "versionId": "d14e3d3f-1fcd-4c7d-b459-81f98450ca36"
 }
