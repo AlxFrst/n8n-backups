@@ -11,6 +11,17 @@
           }
         ]
       ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Discord1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-11-23T15:35:10.358Z",
@@ -64,6 +75,44 @@
           "name": "Mails"
         }
       }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "id": "ba03e33a-c39b-4b10-b479-8318722408f4",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        640,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=Une nouvelle journée commence !",
+        "options": {}
+      },
+      "id": "50f3c11b-6404-49e8-9544-6274e926be00",
+      "name": "Discord1",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        860,
+        40
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "KiWgQR4AYAAm4gvf",
+          "name": "Mails"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -72,14 +121,17 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1700839507,
+      "lastTimeChecked": 1701092209,
       "possibleDuplicates": [
-        "18c01ef76f230be8"
+        "18c10ff3b841ef58"
       ]
+    },
+    "node:Schedule Trigger": {
+      "recurrencyRules": []
     }
   },
   "tags": [],
-  "triggerCount": 1,
-  "updatedAt": "2023-11-24T15:25:28.000Z",
-  "versionId": "7ec0351f-38a0-49d5-bf09-36cbbdcc12fa"
+  "triggerCount": 2,
+  "updatedAt": "2023-11-27T16:01:28.000Z",
+  "versionId": "85de4b8a-838f-48a4-8ee5-ea93b171451d"
 }
