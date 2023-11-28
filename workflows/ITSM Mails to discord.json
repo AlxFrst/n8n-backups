@@ -22,6 +22,44 @@
           }
         ]
       ]
+    },
+    "Google Calendar Trigger": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Discord2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-11-23T15:35:10.358Z",
@@ -45,8 +83,8 @@
       "type": "n8n-nodes-base.gmailTrigger",
       "typeVersion": 1,
       "position": [
-        640,
-        200
+        660,
+        400
       ],
       "credentials": {
         "gmailOAuth2": {
@@ -66,8 +104,8 @@
       "type": "n8n-nodes-base.discord",
       "typeVersion": 2,
       "position": [
-        860,
-        200
+        880,
+        400
       ],
       "credentials": {
         "discordWebhookApi": {
@@ -90,7 +128,7 @@
       "typeVersion": 1.1,
       "position": [
         640,
-        40
+        -80
       ]
     },
     {
@@ -105,7 +143,7 @@
       "typeVersion": 2,
       "position": [
         860,
-        40
+        -80
       ],
       "credentials": {
         "discordWebhookApi": {
@@ -113,6 +151,88 @@
           "name": "Mails"
         }
       }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "calendarId": {
+          "__rl": true,
+          "value": "aforestier@itsm-factory.com",
+          "mode": "list",
+          "cachedResultName": "aforestier@itsm-factory.com"
+        },
+        "triggerOn": "eventStarted",
+        "options": {}
+      },
+      "id": "5618aac7-4872-4f84-bddf-bebe580536ff",
+      "name": "Google Calendar Trigger",
+      "type": "n8n-nodes-base.googleCalendarTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        100
+      ],
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "GOByZf9l8O0TDcyM",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "={{ $json.formattedDate }}  {{ $json.summary }}",
+        "options": {}
+      },
+      "id": "ca07c51a-f5b8-43dc-97ab-fbe8daa8df9c",
+      "name": "Discord2",
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        1280,
+        100
+      ],
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "KiWgQR4AYAAm4gvf",
+          "name": "Mails"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.start.dateTime }}",
+        "format": "custom",
+        "customFormat": "hh:mm",
+        "options": {}
+      },
+      "id": "71b99437-6b03-4731-9c1f-81fbf4c8fd8c",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        840,
+        100
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3fd61a94-0419-4967-806e-f80302197de7",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        980,
+        240
+      ]
     }
   ],
   "pinData": {},
@@ -121,17 +241,20 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1701092209,
+      "lastTimeChecked": 1701181866,
       "possibleDuplicates": [
-        "18c10ff3b841ef58"
+        "18c16574d8a43893"
       ]
     },
     "node:Schedule Trigger": {
       "recurrencyRules": []
+    },
+    "node:Google Calendar Trigger": {
+      "lastTimeChecked": "2023-11-28T14:30:58Z"
     }
   },
   "tags": [],
-  "triggerCount": 2,
-  "updatedAt": "2023-11-28T05:00:00.000Z",
-  "versionId": "85de4b8a-838f-48a4-8ee5-ea93b171451d"
+  "triggerCount": 3,
+  "updatedAt": "2023-11-28T14:31:16.000Z",
+  "versionId": "7a5b5e41-5b50-4757-825b-e29e5a7b2cb4"
 }
