@@ -1,0 +1,18 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2023-11-29T12:15:31.500Z",
+  "id": "oNCFiayJmWO3E504",
+  "meta": null,
+  "name": "[iTOP] CSV Collector",
+  "nodes": [],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2023-11-29T12:15:31.500Z",
+  "versionId": "60498c41-d68c-40ab-8fe1-cafa7d368e8d"
+}
