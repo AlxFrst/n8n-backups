@@ -241,7 +241,7 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1701360316,
+      "lastTimeChecked": 1701406755,
       "possibleDuplicates": [
         "18c20fa5bcba7ee2"
       ]
@@ -250,11 +250,11 @@
       "recurrencyRules": []
     },
     "node:Google Calendar Trigger": {
-      "lastTimeChecked": "2023-11-30T16:05:58Z"
+      "lastTimeChecked": "2023-12-01T04:59:58Z"
     }
   },
   "tags": [],
   "triggerCount": 3,
-  "updatedAt": "2023-11-30T16:06:17.000Z",
+  "updatedAt": "2023-12-01T05:00:00.000Z",
   "versionId": "7a5b5e41-5b50-4757-825b-e29e5a7b2cb4"
 }
