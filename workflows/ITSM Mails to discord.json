@@ -3,24 +3,7 @@
   "connections": {
     "Gmail Trigger": {
       "main": [
-        [
-          {
-            "node": "Discord",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Schedule Trigger": {
-      "main": [
-        [
-          {
-            "node": "Discord1",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Google Calendar Trigger": {
@@ -83,8 +66,8 @@
       "type": "n8n-nodes-base.gmailTrigger",
       "typeVersion": 1,
       "position": [
-        660,
-        400
+        440,
+        440
       ],
       "credentials": {
         "gmailOAuth2": {
@@ -106,44 +89,6 @@
       "position": [
         880,
         400
-      ],
-      "credentials": {
-        "discordWebhookApi": {
-          "id": "KiWgQR4AYAAm4gvf",
-          "name": "Mails"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "rule": {
-          "interval": [
-            {}
-          ]
-        }
-      },
-      "id": "ba03e33a-c39b-4b10-b479-8318722408f4",
-      "name": "Schedule Trigger",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.1,
-      "position": [
-        640,
-        -80
-      ]
-    },
-    {
-      "parameters": {
-        "authentication": "webhook",
-        "content": "=Une nouvelle journée commence !",
-        "options": {}
-      },
-      "id": "50f3c11b-6404-49e8-9544-6274e926be00",
-      "name": "Discord1",
-      "type": "n8n-nodes-base.discord",
-      "typeVersion": 2,
-      "position": [
-        860,
-        -80
       ],
       "credentials": {
         "discordWebhookApi": {
@@ -231,7 +176,7 @@
       "typeVersion": 2.1,
       "position": [
         980,
-        240
+        260
       ]
     }
   ],
@@ -241,20 +186,20 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1701785703,
+      "lastTimeChecked": 1701880845,
       "possibleDuplicates": [
-        "18c3a5604a223b93"
+        "18c4000dfc099db9"
       ]
     },
     "node:Schedule Trigger": {
       "recurrencyRules": []
     },
     "node:Google Calendar Trigger": {
-      "lastTimeChecked": "2023-12-06T04:59:58Z"
+      "lastTimeChecked": "2023-12-06T16:40:57Z"
     }
   },
   "tags": [],
-  "triggerCount": 3,
-  "updatedAt": "2023-12-06T05:00:00.000Z",
-  "versionId": "7a5b5e41-5b50-4757-825b-e29e5a7b2cb4"
+  "triggerCount": 2,
+  "updatedAt": "2023-12-06T16:41:39.000Z",
+  "versionId": "f625d354-ba98-4e8e-bfe6-c7b577a4f20d"
 }
