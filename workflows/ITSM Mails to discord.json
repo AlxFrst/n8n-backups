@@ -195,11 +195,11 @@
       "recurrencyRules": []
     },
     "node:Google Calendar Trigger": {
-      "lastTimeChecked": "2023-12-22T14:37:58Z"
+      "lastTimeChecked": "2023-12-25T08:00:58Z"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-22T14:38:22.000Z",
+  "updatedAt": "2023-12-25T08:00:58.000Z",
   "versionId": "f625d354-ba98-4e8e-bfe6-c7b577a4f20d"
 }
