@@ -186,20 +186,20 @@
   },
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": 1703850851,
+      "lastTimeChecked": 1704112085,
       "possibleDuplicates": [
-        "18cb56cc729304c3"
+        "18cc4fee44ecff51"
       ]
     },
     "node:Schedule Trigger": {
       "recurrencyRules": []
     },
     "node:Google Calendar Trigger": {
-      "lastTimeChecked": "2023-12-30T00:20:41Z"
+      "lastTimeChecked": "2024-01-01T12:28:34Z"
     }
   },
   "tags": [],
   "triggerCount": 2,
-  "updatedAt": "2023-12-30T00:20:41.000Z",
+  "updatedAt": "2024-01-01T12:28:45.000Z",
   "versionId": "f625d354-ba98-4e8e-bfe6-c7b577a4f20d"
 }
